@@ -10,6 +10,7 @@ var paths = {
         "src/scripts/game/states/boot.js",
         "src/scripts/game/states/preload.js",
         "src/scripts/game/prefabs/bird.js",
+        "src/scripts/game/prefabs/ground.js",
         "src/scripts/game/states/menu.js",
         "src/scripts/game/states/play.js",
         "src/scripts/main.js"
@@ -19,12 +20,12 @@ var paths = {
     fonts: 'src/fonts/**/*'
   },
   dest : {
-    html: 'app',
-    styles: 'app/css',
-    scripts: 'app/js',
-    images: 'app/assets',
-    sounds: 'app/assets',
-    fonts: 'app/assets'
+    html: '../flappy_bird_gh',
+    styles: '../flappy_bird_gh/css',
+    scripts: '../flappy_bird_gh/js',
+    images: '../flappy_bird_gh/assets',
+    sounds: '../flappy_bird_gh/assets',
+    fonts: '../flappy_bird_gh/assets'
   }
 };
 
