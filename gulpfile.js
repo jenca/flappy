@@ -9,6 +9,7 @@ var paths = {
     scripts: 'src/scripts/**/*.js',
     images: 'src/images/**/*',
     sounds: 'src/sounds/**/*',
+    fonts: 'src/fonts/**/*'
   },
   dest : {
     html: 'app',
@@ -16,6 +17,7 @@ var paths = {
     scripts: 'app/js',
     images: 'app/assets',
     sounds: 'app/assets',
+    fonts: 'app/assets'
   }
 };
 
@@ -59,6 +61,12 @@ gulp.task('sounds', function() {
     .pipe($.connect.reload());
 });
 
+gulp.task('fonts', function() {
+ return gulp.src(paths.src.fonts, { read: false })
+    .pipe(gulp.dest(paths.dest.fonts))
+    .pipe($.connect.reload());
+});
+
 gulp.task('connect', $.connect.server({
   root: [paths.dest.html],
   port: 8080,
@@ -84,7 +92,7 @@ gulp.task('test', function() {
     .pipe($.mocha());
 });
 
-gulp.task('build', ['html', 'styles', 'scripts', 'vendor', 'images', 'sounds']);
+gulp.task('build', ['html', 'styles', 'scripts', 'vendor', 'images', 'sounds', 'fonts']);
 
 gulp.task('dev', ['build', 'connect', 'watch']);
 
