@@ -16,6 +16,7 @@ Preload.prototype = {
         this.load.image('ground', 'assets/ground.png');
         this.load.image('title', 'assets/title.png');
         this.load.image('startButton', 'assets/start-button.png');
+        this.load.image('poop', 'assets/poop.png');
 
         this.load.spritesheet('bird', 'assets/bird.png', 34, 24, 3);
     },
@@ -24,7 +25,7 @@ Preload.prototype = {
     },
     update: function() {
         if(!!this.ready) {
-            this.game.state.start('menu');
+            this.game.state.start('play');
         }
     },
     onLoadComplete: function() {

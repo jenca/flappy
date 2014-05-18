@@ -6,7 +6,14 @@ var paths = {
   src : {
     html: 'src/*.html',
     styles: 'src/styles/**/*.css',
-    scripts: 'src/scripts/**/*.js',
+    scripts: [
+        "src/scripts/game/states/boot.js",
+        "src/scripts/game/states/preload.js",
+        "src/scripts/game/prefabs/bird.js",
+        "src/scripts/game/states/menu.js",
+        "src/scripts/game/states/play.js",
+        "src/scripts/main.js"
+    ],
     images: 'src/images/**/*',
     sounds: 'src/sounds/**/*',
     fonts: 'src/fonts/**/*'
